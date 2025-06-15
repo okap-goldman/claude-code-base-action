@@ -9,7 +9,7 @@ const execAsync = promisify(exec);
 
 const PIPE_PATH = "/tmp/claude_prompt_pipe";
 const EXECUTION_FILE = "/tmp/claude-execution-output.json";
-const BASE_ARGS = ["-p", "--verbose", "--output-format", "stream-json"];
+const BASE_ARGS = ["-p", "--verbose", "--output-format", "stream-json", "--dangerously-skip-permissions", "--model", "sonnet"];
 
 export type ClaudeOptions = {
   allowedTools?: string;
